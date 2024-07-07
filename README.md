@@ -70,6 +70,6 @@ For any questions or inquiries, please contact:
 
 - Uzair Hussain
 - Email: [uzairhussain193@gmail.com](mailto:uzairhussain193@gmail.com) 
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/uzairhussain1)
+- LinkedIn: [Uzair Hussain](https://www.linkedin.com/in/uzairhussain1)
 
 Thank you for visiting the Chronic Kidney Disease Survey Website repository!
