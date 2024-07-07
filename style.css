@@ -2,32 +2,38 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 5px;
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    text-align: center;
-    color: #333;
-}
-
-p {
-    text-align: center;
-    color: #555;
+h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5em;
+    margin-top: 1.5em;
 }
 
 label {
     display: block;
-    margin: 10px 0 5px;
-    font-size: 18px;
+    margin-top: 1em;
+    font-weight: bold;
 }
 
 input[type="text"],
@@ -35,41 +41,45 @@ input[type="email"],
 input[type="number"],
 textarea,
 select {
-    width: 100%;
+    width: calc(100% - 22px); /* Adjusted for padding and border */
     padding: 10px;
-    margin: 5px 0 20px;
+    margin-top: 0.5em;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-.radio-group {
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5em;
+}
+
+.radio-group,
+.checkbox-group {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1em;
 }
 
-.radio-group input[type="radio"] {
-    margin-right: 10px;
-}
-
-.radio-group label {
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
+input[type="submit"] {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 1em 2em;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 18px;
-    margin-top: 20px;
+    margin-top: 1.5em;
 }
 
-button:hover {
+input[type="submit"]:hover {
     background-color: #45a049;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    bottom: 0;
+    width: 100%;
 }

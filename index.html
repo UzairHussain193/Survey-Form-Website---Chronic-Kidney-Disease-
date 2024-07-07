@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chronic Kidney Disease - Survey</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -24,12 +24,14 @@
             <input type="number" id="age" name="age" required><br>
 
             <label>Gender: </label>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Other</label><br>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div><br>
 
             <label for="height">Height: </label>
             <input type="number" id="height" name="height" required> 
@@ -46,25 +48,26 @@
             </select><br>
 
             <section>
-                
                 <h2>Medical History</h2>
-
                 <label>Do you have a history of chronic kidney disease in your family?</label>
-                <input type="radio" id="family-history-yes" name="family-history-yes" required>
-                <label for="family-history-yes">Yes</label>
-                <input type="radio" id="family-history-no" name="family-history-no" required>
-                <label for="family-history-no">No</label><br>
-
+                <div class="radio-group">
+                    <input type="radio" id="family-history-yes" name="family-history" value="yes" required>
+                    <label for="family-history-yes">Yes</label>
+                    <input type="radio" id="family-history-no" name="family-history" value="no" required>
+                    <label for="family-history-no">No</label>
+                </div><br>
 
                 <label>Do you have any of the following conditions?</label>
-                <input type="checkbox" id="diabetes" name="conditions" value="diabetes">
-                <label for="diabetes">Diabetes</label>
-                <input type="checkbox" id="hypertension" name="conditions" value="hypertension">
-                <label for="hypertension">Hypertension</label>
-                <input type="checkbox" id="heart-disease" name="conditions" value="heart-disease">
-                <label for="heart-disease">Heart Disease</label>
-                <input type="checkbox" id="other-condition" name="conditions" value="other">
-                <label for="other-condition">Others</label><br>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="diabetes" name="conditions" value="diabetes">
+                    <label for="diabetes">Diabetes</label>
+                    <input type="checkbox" id="hypertension" name="conditions" value="hypertension">
+                    <label for="hypertension">Hypertension</label>
+                    <input type="checkbox" id="heart-disease" name="conditions" value="heart-disease">
+                    <label for="heart-disease">Heart Disease</label>
+                    <input type="checkbox" id="other-condition" name="conditions" value="other">
+                    <label for="other-condition">Others</label>
+                </div><br>
 
                 <label for="medications">Are you currently taking any medications?</label>
                 <textarea id="medications" name="medications" rows="4" cols="50"></textarea><br>
@@ -74,11 +77,9 @@
 
                 <label for="surgeries">Have you ever had any surgeries related to kidney disease?</label>
                 <textarea id="surgeries" name="surgeries" rows="4" cols="50"></textarea><br>
-
             </section>
 
             <section>
-
                 <h2>Lifestyle Factors</h2>
                 <label>How often do you consume the following?</label>
                 <label for="fruits-veg">Fruits and Vegetables</label>
@@ -105,44 +106,50 @@
                 <textarea id="exercise-type" name="exercise-type" rows="4" cols="50"></textarea><br>
 
                 <label>Smoking Status</label>
-                <input type="radio" id="smoker" name="smoking-status" value="current-smoker">
-                <label for="smoker">Current Smoker</label>
-                <input type="radio" id="former-smoker" name="smoking-status" value="former-smoker">
-                <label for="former-smoker">Former Smoker</label>
-                <input type="radio" id="never-smoked" name="smoking-status" value="never-smoked">
-                <label for="never-smoked">Never Smoked</label><br>
+                <div class="radio-group">
+                    <input type="radio" id="smoker" name="smoking-status" value="current-smoker">
+                    <label for="smoker">Current Smoker</label>
+                    <input type="radio" id="former-smoker" name="smoking-status" value="former-smoker">
+                    <label for="former-smoker">Former Smoker</label>
+                    <input type="radio" id="never-smoked" name="smoking-status" value="never-smoked">
+                    <label for="never-smoked">Never Smoked</label>
+                </div><br>
 
                 <label>Alcohol Consumption</label>
-                <input type="radio" id="alcohol-yes" name="alcohol-consumption" value="yes">
-                <label for="alcohol-yes">Yes</label>
-                <select id="alcohol-frequency" name="alcohol-frequency">
-                    <option value="">Select</option>
-                    <option value="daily">Daily</option>
-                    <option value="weekly">Weekly</option>
-                    <option value="monthly">Monthly</option>
-                    <option value="rarely">Rarely</option>
-                </select>
-                <input type="radio" id="alcohol-no" name="alcohol-consumption" value="no">
-                <label for="alcohol-no">No</label><br>
+                <div class="radio-group">
+                    <input type="radio" id="alcohol-yes" name="alcohol-consumption" value="yes">
+                    <label for="alcohol-yes">Yes</label>
+                    <select id="alcohol-frequency" name="alcohol-frequency">
+                        <option value="">Select</option>
+                        <option value="daily">Daily</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="rarely">Rarely</option>
+                    </select>
+                    <input type="radio" id="alcohol-no" name="alcohol-consumption" value="no">
+                    <label for="alcohol-no">No</label>
+                </div><br>
             </section> 
 
             <section>
                 <h2>Symptoms and Health Status</h2>
                 <label>Do you experience any of the following symptoms?</label>
-                <input type="checkbox" id="swelling" name="symptoms" value="swelling">
-                <label for="swelling">Swelling in legs/feet</label>
-                <input type="checkbox" id="fatigue" name="symptoms" value="fatigue">
-                <label for="fatigue">Fatigue</label>
-                <input type="checkbox" id="breath" name="symptoms" value="breath">
-                <label for="breath">Shortness of breath</label>
-                <input type="checkbox" id="nausea" name="symptoms" value="nausea">
-                <label for="nausea">Nausea</label>
-                <input type="checkbox" id="urination" name="symptoms" value="urination">
-                <label for="urination">Frequent urination</label>
-                <input type="checkbox" id="blood-urine" name="symptoms" value="blood-urine">
-                <label for="blood-urine">Blood in urine</label>
-                <input type="checkbox" id="other-symptoms" name="symptoms" value="other">
-                <label for="other-symptoms">Others</label><br>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="swelling" name="symptoms" value="swelling">
+                    <label for="swelling">Swelling in legs/feet</label>
+                    <input type="checkbox" id="fatigue" name="symptoms" value="fatigue">
+                    <label for="fatigue">Fatigue</label>
+                    <input type="checkbox" id="breath" name="symptoms" value="breath">
+                    <label for="breath">Shortness of breath</label>
+                    <input type="checkbox" id="nausea" name="symptoms" value="nausea">
+                    <label for="nausea">Nausea</label>
+                    <input type="checkbox" id="urination" name="symptoms" value="urination">
+                    <label for="urination">Frequent urination</label>
+                    <input type="checkbox" id="blood-urine" name="symptoms" value="blood-urine">
+                    <label for="blood-urine">Blood in urine</label>
+                    <input type="checkbox" id="other-symptoms" name="symptoms" value="other">
+                    <label for="other-symptoms">Others</label>
+                </div><br>
 
                 <label for="symptom-onset">When did you first notice these symptoms?</label>
                 <input type="date" id="symptom-onset" name="symptom-onset"><br>
@@ -154,77 +161,38 @@
                 <textarea id="other-conditions" name="other-conditions" rows="4" cols="50"></textarea><br>
             </section>
 
-
             <section>
                 <h2>Specific CKD Details</h2>
                 <label for="ckd-stage">What stage of CKD have you been diagnosed with?</label>
                 <select id="ckd-stage" name="ckd-stage" required>
                     <option value="">Select</option>
-                    <option value="stage-1">Stage 1</option>
-                    <option value="stage-2">Stage 2</option>
-                    <option value="stage-3">Stage 3</option>
-                    <option value="stage-4">Stage 4</option>
-                    <option value="stage-5">Stage 5</option>
+                    <option value="stage1">Stage 1</option>
+                    <option value="stage2">Stage 2</option>
+                    <option value="stage3">Stage 3</option>
+                    <option value="stage4">Stage 4</option>
+                    <option value="stage5">Stage 5</option>
                 </select><br>
 
-                <label for="diagnosis">Who diagnosed you with CKD?</label>
-                <textarea id="diagnosis" name="diagnosis" rows="4" cols="50"></textarea><br>
+                <label for="diagnosis-date">When were you diagnosed with CKD?</label>
+                <input type="date" id="diagnosis-date" name="diagnosis-date"><br>
 
-                <label for="treatments">What treatments are you currently undergoing?</label>
-                <input type="checkbox" id="medication" name="treatments" value="medication">
-                <label for="medication">Medication</label>
-                <input type="checkbox" id="dialysis" name="treatments" value="dialysis">
-                <label for="dialysis">Dialysis</label>
-                <input type="checkbox" id="transplant" name="treatments" value="transplant">
-                <label for="transplant">Kidney Transplant</label>
-                <input type="checkbox" id="other-treatments" name="treatments" value="other">
-                <label for="other-treatments">Others</label><br>
-
-                <label for="doctor-visits">How frequently do you visit your healthcare provider for CKD?</label>
-                <select id="doctor-visits" name="doctor-visits" required>
-                    <option value="">Select</option>
-                    <option value="weekly">Weekly</option>
-                    <option value="monthly">Monthly</option>
-                    <option value="quarterly">Quarterly</option>
-                    <option value="annually">Annually</option>
-                </select><br>
-
-                <label for="ckd-tests">What tests have you undergone for CKD?</label>
-                <input type="checkbox" id="blood-tests" name="ckd-tests" value="blood-tests">
-                <label for="blood-tests">Blood tests</label>
-                <input type="checkbox" id="urine-tests" name="ckd-tests" value="urine-tests">
-                <label for="urine-tests">Urine tests</label>
-                <input type="checkbox" id="imaging-tests" name="ckd-tests" value="imaging-tests">
-                <label for="imaging-tests">Imaging tests</label>
-                <input type="checkbox" id="biopsy" name="ckd-tests" value="biopsy">
-                <label for="biopsy">Biopsy</label>
-                <input type="checkbox" id="other-tests" name="ckd-tests" value="other">
-                <label for="other-tests">Others</label><br>
-
+                <label for="treatment">Are you currently undergoing treatment for CKD?</label>
+                <textarea id="treatment" name="treatment" rows="4" cols="50"></textarea><br>
             </section>
-
-            <section>
-                <h2>Impact on Daily Life</h2>
-                <label for="daily-life">How has CKD affected your daily life?</label>
-                <textarea id="daily-life" name="daily-life" rows="4" cols="50"></textarea><br>
-
-                <label for="lifestyle-changes">Have you made any lifestyle changes since being diagnosed with CKD?</label>
-                <textarea id="lifestyle-changes" name="lifestyle-changes" rows="4" cols="50"></textarea><br>
-
-                <label for="support-groups">Do you have access to support groups or resources for CKD?</label>
-                <textarea id="support-groups" name="support-groups" rows="4" cols="50"></textarea><br>
-            </section>
-
+            
             <section>
                 <h2>Additional Comments</h2>
                 <label for="additional-comments">Is there anything else you would like to share about your experience with CKD?</label>
                 <textarea id="additional-comments" name="additional-comments" rows="4" cols="50"></textarea><br>
             </section>
 
-            <button type="submit">Submit</button>
+            <label for="consent">By submitting this form, you agree to share your information with us.</label>
+            <input type="checkbox" id="consent" name="consent" required><br>
+
+            <input type="submit" value="Submit">
         </form>
     </main>
-
+    
     <footer>
         <p>&copy; 2024 This Form is made with ❤️ by <a href="https://linkedin.com/in/uzairhussain1/" target="_blank" >Uzair Hussain</a></p>
     </footer>
